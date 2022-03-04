@@ -176,9 +176,7 @@ class SharedPointerPrinter:
         if self.val['__ptr_'] == 0:
             return '%s (%s) = %s <nullptr>' % (self.typename, state,
                                                self.val['__ptr_'])
-        return '%s (%s) = %s => %s' % (self.typename, state,
-                                       self.val['__ptr_'],
-                                       self.val['__ptr_'].dereference())
+        return '%s (%s) = %s' % (self.typename, state, self.val['__ptr_'])
 
 
 class UniquePointerPrinter:
